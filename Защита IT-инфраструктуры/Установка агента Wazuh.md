@@ -65,3 +65,41 @@ systemctl start wazuh-agent
 ```
 
 ## Через deb-пакет
+
+Выполняем от ```root```:
+
+```
+WAZUH_MANAGER='192.168.2.200' dpkg -i ./имя пакета
+```
+
+*Если вдруг не законнектился к серверу, то меняем ручками IP сервера:*
+
+Редактируем конфиг:
+
+```
+nano /var/ossec/etc/ossec.conf
+```
+
+Находим строки и меняем адрес:
+
+```
+<client>
+  <server>
+    <address>192.168.2.200</address>
+  </server>
+</client>
+```
+
+Включаем агента:
+
+```
+systemctl daemon-reload
+```
+
+```
+systemctl enable wazuh-agent
+```
+
+```
+systemctl start wazuh-agent
+```
