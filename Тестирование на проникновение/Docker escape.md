@@ -93,7 +93,7 @@ curl --unix-socket /run/docker.sock -X POST http://localhost/containers/030663b3
 
 ## env
 
-Когда сидим в dockere, можем посмотреть ```env```:
+Когда сидим в докере, можем посмотреть ```env```:
 
 ```
 env
