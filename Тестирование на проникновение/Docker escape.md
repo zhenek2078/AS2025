@@ -27,7 +27,7 @@ lsblk
 mount
 ```
 
-Илия:
+Или:
 
 ```
 cat /proc/mounts
